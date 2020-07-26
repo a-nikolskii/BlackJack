@@ -2,12 +2,13 @@
 #include <vector>
 
 class Hand {
-private:
+protected:
     std::vector<Card*> m_Cards;
 public:
     Hand();
-    Hand(unsigned num, ...);
+    //Hand(unsigned num, ...);
     void Add(Card* pCard);
     void Clear();
     int GetTotal() const;
+    virtual ~Hand();
 };
