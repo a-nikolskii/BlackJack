@@ -18,6 +18,8 @@ add_executable(BlackJack
   Card.cpp
   Hand.cpp
   GenericPlayer.cpp
+  Player.cpp
+  House.cpp
 )
 target_link_libraries(BlackJack Qt5::Core)
 target_include_directories(BlackJack PRIVATE include)
