@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
     AceClubs.Flip();
 
     //Одна из карт не перевертнута
-    Hand h0 (1, &TwoClubs);
-    h0.Add(&AceClubs);
-    std::cout << h0.GetTotal() << std::endl;
+    //Hand h0 (1, &TwoClubs);
+    //h0.Add(&AceClubs);
+    //std::cout << h0.GetTotal() << std::endl;
 
     TwoClubs.Flip();
     JackClubs.Flip();
@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
     std::cout << h1.GetTotal() << std::endl;
 
     //Тест конструктора с произвольным числом параметров
-    Hand h2 (2, &AceClubs, &JackClubs);
-    std::cout << h2.GetTotal() << std::endl;
+    //Hand h2 (2, &AceClubs, &JackClubs);
+    //std::cout << h2.GetTotal() << std::endl;
 
 
 
