@@ -33,4 +33,5 @@ public:
     int GetValue () const;
     int GetSuit () const;
     void Flip();
+    friend std::ostream& operator<< (std::ostream& out, const Card& card);
 };

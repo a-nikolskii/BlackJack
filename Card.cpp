@@ -21,3 +21,16 @@ int Card::GetSuit () const {
 }
 
 void Card::Flip() {m_isFaceUp = true;}
+
+std::ostream& operator<< (std::ostream& out, const Card& card) {
+    const std::string RANKS[] = { "0", "A", "2", "3", "4", "5", "6", "7", "8", "9","10", "J", "Q", "K" };
+    const std::string SUITS[] = { "c", "d", "h", "s" };
+
+    if (card.m_isFaceUp) {
+        out << RANKS[card.m_rank] << SUITS[card.m_suit];
+    }
+    else {
+        out << "XX";
+    }
+    return out;
+}
