@@ -1,4 +1,4 @@
-#include <House.h>
+#include "House.h"
 
 bool House::IsHitting() const {
     return (GetTotal() <= 16);

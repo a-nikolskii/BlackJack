@@ -1,4 +1,4 @@
-#include <GenericPlayer.h>
+#include "GenericPlayer.h"
 
 GenericPlayer::GenericPlayer(std::string name) : Hand(), m_name(name) {}
 

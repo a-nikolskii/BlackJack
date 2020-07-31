@@ -1,3 +1,4 @@
+#pragma once
 #include <Hand.h>
 
 class GenericPlayer : public Hand {
