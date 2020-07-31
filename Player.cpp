@@ -15,7 +15,7 @@ bool Player::IsHitting() const {
             tolower(*it);
         }
         if (responce == "y" || responce == "yes") return true;
-        else if (responce == "n" || responce == "now") return false;
+        else if (responce == "n" || responce == "no") return false;
         else {
             std::cout << "Please enter (Y/N): ";
             continue;
