@@ -34,7 +34,13 @@ int Hand::GetTotal() const {
             std::cout << "Once of card is not faceUp"<< std::endl;
             return 0;
         }
-        total += (*card)->GetValue();
+
+        if ((*card)->GetValue() > 10) {
+            total +=10;
+        } else {
+            total += (*card)->GetValue();
+        }
+
         if ( (*card)->GetValue() == ACE ) thereIsAce = true;
     }
 

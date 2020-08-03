@@ -1,5 +1,7 @@
 #include "House.h"
 
+House::House(const std::string& name) : GenericPlayer(name){}
+
 bool House::IsHitting() const {
     return (GetTotal() <= 16);
 };

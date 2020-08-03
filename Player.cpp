@@ -1,6 +1,7 @@
 #include "Player.h"
 #include <cctype>
 
+Player::Player(const std::string& name) : GenericPlayer(name){}
 
 bool Player::IsHitting() const {
     std::string responce;
