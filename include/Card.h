@@ -12,15 +12,15 @@ enum Rank {
     EIGHT =  8,
     NINE =   9,
     JACK =  10,
-    QUEEN = 10,
-    KING =  10,
+    QUEEN = 11,
+    KING =  12,
 };
 
 enum Suit {
-    DIAMONDS = 1,
-    HEARTS =   2,
-    SPADES =   3,
-    CLUBS =    4
+    DIAMONDS = 0,
+    HEARTS =   1,
+    SPADES =   2,
+    CLUBS =    3
 };
 
 class Card {

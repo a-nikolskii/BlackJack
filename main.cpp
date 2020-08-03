@@ -1,35 +1,39 @@
 #include <iostream>
-#include "Hand.h"
+#include <vector>
+#include "Game.h"
 
 int main(int argc, char *argv[])
 {
 
-    Card AceClubs (ACE, CLUBS);
-    Card TwoClubs (TWO, CLUBS);
-    Card JackClubs (JACK, CLUBS);
+    std::cout << "\t\tWelcome to Blackjack!\n\n";
 
-    AceClubs.Flip();
+    int numPlayers = 0;
+    while (numPlayers < 1 || numPlayers > 7)
+    {
+        std::cout << "How many players? (1 - 7): ";
+        std::cin >> numPlayers;
+    }
 
-    //Одна из карт не перевертнута
-    //Hand h0 (1, &TwoClubs);
-    //h0.Add(&AceClubs);
-    //std::cout << h0.GetTotal() << std::endl;
+    std::vector<std::string> names;
+    std::string name;
+    for (int i = 0; i < numPlayers; ++i)
+    {
+        std::cout << "Enter player name: ";
+        std::cin >> name;
+        names.push_back(name);
+    }
+    std::cout << std::endl;
+    std::cin.ignore(32767, '\n');
 
-    TwoClubs.Flip();
-    JackClubs.Flip();
-    //Добор карты по одной + туз меняет значение на 1
-    Hand h1;
-    h1.Add(&AceClubs);
-    h1.Add(&TwoClubs);
-    h1.Add(&JackClubs);
-
-    std::cout << h1.GetTotal() << std::endl;
-
-    //Тест конструктора с произвольным числом параметров
-    //Hand h2 (2, &AceClubs, &JackClubs);
-    //std::cout << h2.GetTotal() << std::endl;
-
-
+    // игровой цикл
+    Game aGame(names);
+    char again = 'y';
+    while (again != 'n' && again != 'N')
+    {
+        aGame.Play();
+        std::cout << "\nDo you want to play again? (Y/N): ";
+        std::cin >> again;
+    }
 
     return 0;
 }
